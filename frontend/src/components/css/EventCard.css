@@ -1,0 +1,30 @@
+.event-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card {
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.action-buttons button {
+  width: 48%;
+}
+
+button {
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}

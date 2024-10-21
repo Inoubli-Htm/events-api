@@ -1,0 +1,30 @@
+.footer p {
+  font-size: 0.8rem;
+  color: #f8f9fa;
+}
+
+.footer-description {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #007bff;
+  margin: 10px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #f8f9fa;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
