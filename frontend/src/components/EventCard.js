@@ -1,11 +1,10 @@
 import React from "react";
 import { Card, Button, ButtonGroup } from "react-bootstrap";
+import EventDetails from "./EventDetails";
 import "./css/EventCard.css";
 import UpdateEvent from "./UpdateEvent.js";
 
 const EventCard = ({ event, refreshEvents, onDelete }) => {
-  const { title, description, date, category } = event;
-
   const handleDelete = () => {
     if (window.confirm("Êtes-vous sûr de vouloir supprimer cet événement ?")) {
       onDelete();
@@ -15,16 +14,12 @@ const EventCard = ({ event, refreshEvents, onDelete }) => {
   return (
     <Card className="event-card">
       <Card.Body>
-        <Card.Title className="text-center">{title}</Card.Title>
-        <Card.Text>
-          <strong>Description :</strong> {description}
-        </Card.Text>
-        <Card.Text>
-          <strong>Date :</strong> {new Date(date).toLocaleDateString()}
-        </Card.Text>
-        <Card.Text>
-          <strong>Catégorie :</strong> {category}
-        </Card.Text>
+        <EventDetails
+          title={event.title}
+          description={event.description}
+          date={event.date}
+          category={event.category}
+        />
 
         <ButtonGroup className="action-buttons d-flex justify-content-between mt-3">
           <UpdateEvent event={event} refreshEvents={refreshEvents} />

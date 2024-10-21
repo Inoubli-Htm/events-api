@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Button, Modal } from "react-bootstrap";
-import UpdateEventForm from "./forms/UpdateEventForm";
+import UpdateEventForm from "../forms/UpdateEventForm";
+import axios from "axios";
 
-function UpdateEvent({ event, refreshEvents }) {
+const UseUpdateEventForm = ({ event, refreshEvents }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -31,11 +31,19 @@ function UpdateEvent({ event, refreshEvents }) {
           <Modal.Title>Edit Event</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <UpdateEventForm initialValues={event} onSubmit={handleSubmit} />
+          <UpdateEventForm onSubmit={handleSubmit} initialValues={event} />
         </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Fermer
+          </Button>
+          <Button variant="primary" onClick={handleSubmit}>
+            Enregistrer les modifications
+          </Button>
+        </Modal.Footer>
       </Modal>
     </>
   );
-}
+};
 
-export default UpdateEvent;
+export default UseUpdateEventForm;
