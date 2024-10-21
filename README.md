@@ -24,7 +24,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur 
 
 1. Clonez le dépôt du backend :
 
-   git clone https://github.com/votre-utilisateur/events-api-backend.git
+   git clone https://github.com/Inoubli-Htm/events-api/tree/main/backend
    cd backend
    Installez les dépendances :
 
@@ -54,7 +54,7 @@ category (string)
 Installation du Frontend
 Clonez le dépôt du frontend :
 
-git clone https://github.com/Inoubli-Htm/events-api-frontend.git
+git clone https://github.com/Inoubli-Htm/events-api/tree/main/frontend
 cd events-api-frontend
 Installez les dépendances :
 
